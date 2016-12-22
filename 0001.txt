@@ -1,0 +1,22 @@
+#!/user/bin/python
+# Filename: 0001.py
+# coding:utf-8
+
+# 生成200个序列号
+
+import string
+import random
+
+library = string.digits + string.letters
+result = set()
+
+def get_coupon(m, n):
+if m > 0:
+coupon = ‘’.join(random(library, n))
+result.append(coupon)
+m -= 1
+else:
+print ‘All coupons are:’, result
+break
+
+a = get_coupon(200, 16)
